@@ -1,0 +1,76 @@
+body{
+    background-color: black;
+    font-family: 'Open Sans', Frutiger, Calibri, 'Myriad Pro', Myriad, sans-serif;
+}
+
+.form-style{
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 16px;
+    background: #F7F7F7;
+}
+
+.table-style{
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 16px;
+    background: #F7F7F7;
+}
+
+.pass_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -130px;
+}
+
+#pass_inp{
+    border: none;
+    font-size: 20px;
+    font-weight: 300;
+    width: 249px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 3px;
+    margin: auto;
+}
+
+#pass_submit{
+    background-color: transparent;
+    background-position: 50% 50%;
+    background-image: url("arrow-icon.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    padding: 17px 20px;
+    opacity: .3;
+}
+
+#pass_submit:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.error_msg{
+    color: red;
+    margin-top: 30px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    color: #588c7e;
+    font-size: 20px;
+    text-align: center;
+}
+
+th{
+    background-color: #588c7e;
+    color: white;
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2
+}

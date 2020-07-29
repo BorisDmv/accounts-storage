@@ -1,0 +1,178 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900);
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    background-color: #171A3D;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+}
+
+.container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.card{
+    margin-bottom: 20px;
+}
+
+#formPanel{
+    margin-bottom: 150px;
+    width: 520px;
+    height: 100px;
+}
+
+.topic, .username, .email, .password{
+    background-color: #242852;
+}
+
+.topic{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.password{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.row{
+    height: 60%;
+    width: 100%;
+    border-bottom: 1.2px solid #292C58;
+}
+
+.info{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 40px;
+}
+
+label{
+    display: inline-block;
+    letter-spacing: 0.5px;
+    color: #8F92C3;
+    width: 100px;
+}
+
+#inputs{
+        display: inline-block;
+        max-width: 300px;
+        width: 300px;
+        background-color: transparent;
+        font-family: 'Source Code Pro';
+        border: none;
+        outline: none;
+        margin-left: 50px;
+        color: white;
+}
+
+#inputPass{
+    display: inline-block;
+        max-width: 300px;
+        width: 300px;
+        background-color: transparent;
+        font-family: 'Source Code Pro';
+        border: none;
+        outline: none;
+        margin-left: 50px;
+        color: white;
+}
+
+input::placeholder{
+    font-family: 'Source Code Pro';
+    color: #444880;
+}
+
+.button
+{
+    font-size: 12px;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 1px;
+    height: 55px;
+    width: 520px;
+    background-color: #18C2C0;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1); 
+    margin: 0 0 20px 0;
+}
+
+.button:hover
+{
+    background-color: #15aeac; 
+}
+
+#btn{
+    background-color: transparent;
+    font-family: 'Source Code Pro';
+    border: none;
+    outline: none;
+    color: white;
+    padding: 19px 0px;
+    width:100%;
+}
+
+a{
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Source Code Pro';
+    letter-spacing: 1px;
+    display:inline-block;
+    width:100%;
+    height:100%;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    outline: none; 
+    padding: 19px 0px;
+}
+
+span{
+    text-align: center;
+    display: inline-block;
+    font-family: 'Source Code Pro';
+    cursor: pointer;
+    color: #18C2C0;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #18C2C0;
+    border-radius: 50%;
+    float: right;
+    transform: translate(-18px);
+}
+
+#viewhideImg{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    float: right;
+    transform: translate(-18px);
+}
+
+@media only screen and (max-width: 600px) {
+    #formPanel{
+        width: 250px;
+    }
+
+    .button{
+        width: 250px;
+    }
+
+    a{
+        width: 250px;
+    }
+}

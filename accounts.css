@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900);
+
+html{
+    background-color: #171A3D;
+    font-family: 'Lato', sans-serif;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    color: #588c7e;
+    font-size: 20px;
+    text-align: center;
+}
+
+th{
+    background-color: #15aeac; 
+    color: white;
+}
+
+tr[role=row]{
+    background-color: #292C58;
+}
+
+
+@media only screen and (max-width: 760px)
+{
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin: 0 0 1rem 0;
+    }
+
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #292C58;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 0;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    td:nth-of-type(1):before { content: "Topic"; }
+    td:nth-of-type(2):before { content: "Username"; }
+    td:nth-of-type(3):before { content: "Email"; }
+    td:nth-of-type(4):before { content: "Password"; }
+   
+    
+    a{
+        width: 220px;
+    }
+}
