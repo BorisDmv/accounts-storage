@@ -4,5 +4,11 @@
         "username": "test",
         "email": "test",
         "password": "test"
+    },
+    {
+        "topic": "hah",
+        "username": "hmm",
+        "email": "fg",
+        "password": "rf"
     }
 ]

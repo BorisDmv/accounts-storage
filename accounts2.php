@@ -22,36 +22,39 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Add-Account</title>
+    <title>All accounts</title>
     <link rel="stylesheet" type="text/css" href="accounts.css">
     <link rel="stylesheet" type="text/css" href="form.css">
 </head>
 <body>
-    <div class="button">
-        <a href="form2.php">Add new account</a>
-    </div>
 
-    <table role="table">
-    <thead role="rowgroup">
-        <tr role="row">
-            <th role="columnheader">Topic</th>
-            <th role="columnheader">Username</th>
-            <th role="columnheader">Email</th>
-            <th role="columnheader">Password</th>
+    <table>
+    <caption>Your accounts</caption>
+    <thead>
+        <tr>
+        <th scope="col">Topic</th>
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
         </tr>
-
+    </thead>
+    <tbody>
         <?php foreach($decodedData as $decodedDatas) : ?>
 
-        <tr role="row">
-            <td role="cell"> <?php echo $decodedDatas['topic']; ?> </td>
-            <td role="cell"> <?php echo $decodedDatas['username']; ?> </td>
-            <td role="cell"> <?php echo $decodedDatas['email']; ?> </td>
-            <td role="cell"> <?php echo $decodedDatas['password']; ?> </td>
+        <tr>
+            <td data-label="Topic" role="cell"> <?php echo $decodedDatas['topic']; ?> </td>
+            <td data-label="Username" role="cell"> <?php echo $decodedDatas['username']; ?> </td>
+            <td data-label="Email" role="cell"> <?php echo $decodedDatas['email']; ?> </td>
+            <td data-label="Password" role="cell"> <?php echo $decodedDatas['password']; ?> </td>
         </tr>
 
-    <?php endforeach; ?>
-    </thead>
+        <?php endforeach; ?>
+    </tbody>
     </table>
+
+    <div class="button2">
+        <a href="form.php">GO BACK</a>
+    </div>
 
         
 </body>

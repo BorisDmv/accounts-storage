@@ -1,6 +1,7 @@
 <?php
     session_start();
     $url = 'kameliqData.json'; //Path of the json file
+    $message = "";
         $arr_data = array();
     // echo '<pre>' .print_r($_POST, true). '<pre>';    
     if($_SESSION["logged"] === "yes")
@@ -32,10 +33,10 @@
         //write json data into data.json file
         if(file_put_contents($url, $jsondata)) 
         {
-            echo 'Data successfully saved';
+            $message = 'Data successfully saved';
         }
         else{
-            echo "error";
+            $message = "Error";
         }
 
     }
@@ -51,7 +52,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Form</title>
+    <title>Create account</title>
     <link rel="stylesheet" type="text/css" href="form.css">
     <link rel="stylesheet" type="text/css" href="balloon.css">
 </head>
@@ -112,6 +113,8 @@
             </div>
 
         </form>
+
+        <p class="message"><?php echo $message ?></p>
     </div>
 
     <script src="main.js"></script>
